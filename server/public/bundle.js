@@ -21545,7 +21545,9 @@ var Home = function Home() {
     ),
     _react2.default.createElement(
       'button',
-      { onClick: console.log('Hi there!') },
+      { onClick: function onClick() {
+          return console.log('Hi there!');
+        } },
       'Press me'
     )
   );
