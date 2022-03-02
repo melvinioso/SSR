@@ -39925,9 +39925,14 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(407);
 
+var _reactRedux = __webpack_require__(176);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = function () {
+var Header = function Header(_ref) {
+  var auth = _ref.auth;
+
+  console.log('My auth status is ', auth);
   return _react2.default.createElement(
     'div',
     null,
@@ -39938,6 +39943,14 @@ exports.default = function () {
     )
   );
 };
+
+function mapStateToProps(_ref2) {
+  var auth = _ref2.auth;
+
+  return { auth: auth };
+}
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps)(Header);
 
 /***/ }),
 /* 487 */
