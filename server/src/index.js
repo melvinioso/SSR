@@ -9,6 +9,7 @@ import createStore from './helpers/createStore';
 
 const app = express();
 
+// this does not work
 app.use(
   '/api',
   proxy('http://react-ssr-api.herokuapp.com', {
@@ -18,6 +19,7 @@ app.use(
     },
   })
 );
+
 app.use(express.static('public'));
 
 app.get('*', (req, res) => {
